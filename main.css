@@ -1,0 +1,221 @@
+.typewriter .div4 p {
+  color: #666EA0;
+  font-size: 15px;
+  font-weight: 100;
+  text-align: right;  /* Right aligns the text within the p tag */
+  width: 60%;
+  margin-left: 40%;
+  margin-right: 70%;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  margin: 10 auto; /* Gives that scrolling effect as the typing happens */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .5s step-end infinite;
+}
+
+.typewriter .div3 p {
+  padding: 1rem;
+  font-size: 15px;
+  color: #63A991;
+  width: 20%;
+  font-weight: 100;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  margin: 10 auto; /* Gives that scrolling effect as the typing happens */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .5s step-end infinite;
+    margin-top: 50px;
+  margin-bottom: 50px;
+  margin-right: 0px;
+}
+
+
+
+body {
+    background-color: #F5F5F5;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    color: #29413D;
+    letter-spacing: 5%;
+    line-height: 140%;
+    font-weight: 100;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .item {
+    flex: 1 1 200px; /* Adjust min width to control wrapping */
+  }
+
+  .box {
+    width: 500px; 
+    height: 100px;  
+    border: solid 5px #000;
+    border-color: #000 transparent transparent transparent;
+    border-radius: 50%/100px 100px 0 0;
+  }
+
+
+  .path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 5s linear forwards;
+  }
+  
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+
+.typewriter h2 {
+  align-items: center;
+  text-align: center;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  animation: 
+    typing 3.5s steps(20, end),
+    blink-caret .5s step-end infinite;
+    font-size: 15px;
+    color:#29413D;
+    font-style: oblique;
+    font-weight: 100;
+    margin-top: 5%;
+  margin-bottom: 5%;
+  margin-right: 20%;
+  margin-left: 20%;
+    
+}
+
+.typewriter h3 {
+  font-size: 15px;
+  color: #63A991;
+  font-weight: 100;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .5s step-end infinite;
+    margin-top: 5%;
+  margin-bottom: 5%;
+  margin-right: 150px;
+  margin-left: 80px;
+}
+
+.typewriter h4 {
+  color: #666EA0;
+  font-size: 15px;
+  font-weight: 100;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+    margin-top: 5%;
+  margin-bottom: 5%;
+  margin-right: 150px;
+  margin-left: 80px;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 90% }
+}
+
+
+/* Responsive design for mobile devices */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 13px; /* Slightly smaller base font size */
+  }
+  
+  .typewriter h1, .typewriter h2, .typewriter h3, .typewriter h4 {
+    font-size: 13px; /* Smaller font size for headings */
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .typewriter .div3 p {
+    width: 50%; /* Wider content area on mobile */
+    font-size: 13px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  
+  .typewriter .div4 p {
+    width: 80%; /* Wider content area on mobile */
+    font-size: 13px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  
+  .container {
+    flex-direction: column; /* Stack elements on mobile */
+  }
+  
+  .item {
+    flex: 1 1 100%; /* Full width on mobile */
+  }
+  
+  .box {
+    width: 90%; /* Responsive width */
+    max-width: 400px;
+    height: 80px; /* Slightly smaller height */
+  }
+  
+  /* Adjust the animation for narrower screens */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 95% } /* Slightly wider to use more of the mobile screen */
+  }
+  @keyframes fade-in {
+    from {scale: 8; opacity: 0;}
+    to {scale: 1; opacity: 1;}
+  }
+}
+
+/* For even smaller screens like phones in portrait orientation */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+  
+  .typewriter h1, .typewriter h2, .typewriter h3, .typewriter h4 {
+    font-size: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  
+  .typewriter .div3 p, .typewriter .div4 p {
+    font-size: 15px;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 30%;
+    margin-bottom: 30%;
+  }
+  
+  .box {
+    height: 60px;
+  }
+}
+
+article > video {
+  animation: fade-in linear;
+  animation-timeline: scroll();
+}
+@keyframes fade-in {
+  from {scale: 8; opacity: 0;}
+  to {scale: 1; opacity: 1;}
+}
